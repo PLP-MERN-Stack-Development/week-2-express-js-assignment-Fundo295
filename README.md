@@ -60,4 +60,81 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 
 - [Express.js Documentation](https://expressjs.com/)
 - [RESTful API Design Best Practices](https://restfulapi.net/)
-- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+# 🛍️ Product RESTful API with Express.js
+
+This project is a simple RESTful API built with **Express.js** that manages a list of products. It supports full CRUD operations, middleware for logging, authentication, and validation, and includes advanced features such as filtering, pagination, and product search.
+
+---
+
+## 🚀 Features
+
+- ✅ Full CRUD functionality
+- 🧱 Middleware implementation:
+  - Request logger
+  - JSON body parser
+  - API key authentication
+  - Input validation
+- 🧰 Error handling with custom error classes
+- 🔍 Filtering by category
+- 🔢 Pagination support
+- 🔎 Search by name
+- 📊 Product statistics
+
+---
+
+🧪 API Endpoints
+🟢 GET /api/products
+Get all products with optional filters:
+
+category (e.g. /api/products?category=electronics)
+
+page and limit for pagination
+
+## 🔵 GET /api/products/:id
+Get a product by ID
+
+## 🟡 POST /api/products
+Create a new product (requires API key in x-api-key header)
+
+json
+Copy
+Edit
+{
+  "name": "TV",
+  "description": "55 inch OLED",
+  "price": 999.99,
+  "category": "electronics",
+  "inStock": true
+}
+## 🟠 PUT /api/products/:id
+Update an existing product (requires API key)
+
+## 🔴 DELETE /api/products/:id
+Delete a product by ID (requires API key)
+
+## 🔐 Authentication
+For POST, PUT, and DELETE requests, include the following header:
+
+http
+Copy
+Edit
+x-api-key: mysecretkey
+📊 Stats (Optional Feature)
+Future endpoint ideas:
+
+/api/products/stats — Return total product count, and count per category
+
+## 🛠 Tech Stack
+Node.js
+
+Express.js
+
+UUID
+
+Body-parser
+
+## Run the server 
+node server.js
+
